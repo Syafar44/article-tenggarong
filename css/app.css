@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  display: inline;
+  background-color: rgb(7, 10, 41);
+  color: white;
+}
+
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding-block: 1rem;
+  z-index: 999;
+  background-color: rgb(7, 10, 41);
+}
+
+header.navbar-container .logo {
+  width: 150px;
+  color: #9ac1f0;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #9ac1f0;
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+
+  align-items: center;
+}
+
+main .content-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .content-start .content-description {
+  flex: 1 1;
+  margin-left: 2em;
+}
+
+main .content-start .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+  color: #72fa93;
+}
+
+main .content-start .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content-start .content-description a {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #9ac1f0;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content-start .content-description a:hover {
+  border: 3px solid #9ac1f0;
+  color: #9ac1f0;
+  background-color: transparent;
+}
+
+main .content-start .content-image {
+  flex: 1;
+}
+
+main .content-start .content-image img {
+  margin-left: 27%;
+  min-width: 250px;
+  width: 300px;
+}
+
+main .content-end {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+main .content-end .card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 1px 20px;
+}
+
+main .content-end .card .featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+main .content-end article h1 {
+  color: #a0e548;
+}
+
+main .content-end article h2 {
+  color: #e45f2b;
+}
+
+main aside {
+  display: flex;
+  justify-content: center;
+}
+
+main aside header,
+section {
+  text-align: center;
+}
+
+main aside header h2,
+section h3 {
+  color: #a0e548;
+}
+
+footer {
+  padding: 10px 5em;
+  color: white;
+  background-color: #f6c445;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  header.navbar-container .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  header.navbar-container .logo h1 {
+    font-size: 1em;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content-start {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content-start .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content-start .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content-start .content-image {
+    text-align: center;
+  }
+
+  main .content-start .content-image img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  main .content-end {
+    margin: 0 -2em;
+  }
+}
